@@ -27,6 +27,7 @@ namespace Platformer
         [Header("Variables")]
         public float moveSpeed;
         public float jumpForce;
+        public int arrows = 24;
         public float staminaValue = 100f;
         public float staminaMaxValue = 100f;
         public float needStaminaForRoll = 20f;
@@ -186,13 +187,15 @@ namespace Platformer
         {
             if (isGrounded && (inputManager.MeleeAttack || inputManager.RangeAttack) && !isAttacking && staminaValue >= needStaminaForPunch/* && !isClimping*/) 
             {
-                isAttacking = true; //attack status
                 if (inputManager.MeleeAttack)
                 {
+                    isAttacking = true;
                     animatorController.SetBool("MeleeAttack", isAttacking); //Set animator bool
                 }
-                else if (inputManager.RangeAttack)
+                else if (inputManager.RangeAttack && arrows > 0)
                 {
+                    isAttacking = true;
+                    arrows--;
                     animatorController.SetBool("RangeAttack", isAttacking);
                     audioSource.PlayOneShot(bowSound);
                 }
