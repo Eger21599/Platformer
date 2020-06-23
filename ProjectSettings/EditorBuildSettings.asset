@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Platformer Template/Scenes/Levels/MainMenu.unity
+    path: Assets/Platformer/Scenes/Levels/MainMenu.unity
     guid: c34b41fa488ab8445aa645f36f8a3028
   - enabled: 1
-    path: Assets/Platformer Template/Scenes/Levels/Level 1/Level_1_Normal.unity
+    path: Assets/Platformer/Scenes/Levels/Level 1/Level_1_Normal.unity
     guid: f312dc7fec2e0694ab2ef5ce997eb640
   - enabled: 1
-    path: Assets/Platformer Template/Scenes/Levels/Level 1/Level_1_Hard.unity
+    path: Assets/Platformer/Scenes/Levels/Level 1/Level_1_Hard.unity
     guid: 3f5052795844c4648a9f67a7e3772e99
+  - enabled: 1
+    path: Assets/Platformer/Scenes/Levels/Level 2/Level_2_Normal.unity
+    guid: 63f486ebadc2e67469f78064a75f48d2
   m_configObjects: {}
