@@ -49,9 +49,16 @@ namespace Platformer
         private bool isClimping;
         [HideInInspector] public bool inRoll;
         private bool rolling;
-        [HideInInspector] public int score;
+        public int score;
+        private int scoreLevelOneNormal;
+        private int scoreLevelOneHard;
+        private int scoreLevelTwoNormal;
+        private int scoreLevelTwoHard;
 
         private float rollTimer;
+
+        private bool isLevelOneFinished;
+        private bool isLevelTwoFinished;
 
         private void Awake()
         {
@@ -275,12 +282,81 @@ namespace Platformer
         {
             if(collision2D.gameObject.tag == "Finish")
             {
+                PlayerPrefs.SetString("isLevelOneFinished", isLevelOneFinished.ToString());
+                PlayerPrefs.SetString("isLevelTwoFinished", isLevelTwoFinished.ToString());
+
+                switch(SceneManager.GetActiveScene().name)
+                {
+                    case "Level_1_Normal":
+                        isLevelOneFinished = true;
+
+                        if(!PlayerPrefs.HasKey("Level_1_Normal_Score"))
+                        {
+                            PlayerPrefs.SetInt("Level_1_Normal_Score", score);
+                        }
+                        else
+                        {
+                            if(PlayerPrefs.GetInt("Level_1_Normal_Score") < score)
+                            {
+                                PlayerPrefs.SetInt("Level_1_Normal_Score", score);
+                            }
+                        }
+                    break;
+
+                    case "Level_1_Hard":
+                        isLevelOneFinished = true;
+
+                        if(!PlayerPrefs.HasKey("Level_1_Hard_Score"))
+                        {
+                            PlayerPrefs.SetInt("Level_1_Hard_Score", score);
+                        }
+                        else
+                        {
+                            if(PlayerPrefs.GetInt("Level_1_Hard_Score") < score)
+                            {
+                                PlayerPrefs.SetInt("Level_1_Hard_Score", score);
+                            }
+                        }
+                    break;
+
+                    case "Level_2_Normal":
+                        isLevelTwoFinished = true;
+
+                        if(!PlayerPrefs.HasKey("Level_2_Normal_Score"))
+                        {
+                            PlayerPrefs.SetInt("Level_2_Normal_Score", score);
+                        }
+                        else
+                        {
+                            if(PlayerPrefs.GetInt("Level_2_Normal_Score") < score)
+                            {
+                                PlayerPrefs.SetInt("Level_2_Normal_Score", score);
+                            }
+                        }
+                    break;
+
+                    case "Level_2_Hard":
+                        isLevelTwoFinished = true;
+
+                        if(!PlayerPrefs.HasKey("Level_2_Hard_Score"))
+                        {
+                            PlayerPrefs.SetInt("Level_2_Hard_Score", score);
+                        }
+                        else
+                        {
+                            if(PlayerPrefs.GetInt("Level_2_Hard_Score") < score)
+                            {
+                                PlayerPrefs.SetInt("Level_2_Hard_Score", score);
+                            }
+                        }
+                    break;
+                }
+
                 Time.timeScale = 0;
                 uiManager.finishScreen.SetActive(true);
                 isGameEnd = true;
                 this.enabled = false;
             }
         }
-
     }
 }

@@ -4618,6 +4618,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 273236479932707200, guid: b29415db23812d04fa092070a73408d0,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 273236479932707200, guid: b29415db23812d04fa092070a73408d0,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 399533482}
@@ -4634,6 +4639,36 @@ PrefabInstance:
     - target: {fileID: 273236479932707200, guid: b29415db23812d04fa092070a73408d0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 273236479932707200, guid: b29415db23812d04fa092070a73408d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Platformer.PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 273236479932707200, guid: b29415db23812d04fa092070a73408d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 273236479932707200, guid: b29415db23812d04fa092070a73408d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 273236479932707200, guid: b29415db23812d04fa092070a73408d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2045934627}
+    - target: {fileID: 273236479932707200, guid: b29415db23812d04fa092070a73408d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SavePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 273236479932707200, guid: b29415db23812d04fa092070a73408d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1711736645834871532, guid: b29415db23812d04fa092070a73408d0,
@@ -15151,6 +15186,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2045934625}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2045934627 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114286511060088236, guid: 46226f1df3ccff548ba4e6562e7e790a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2045934625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41d264db86ed4a419dedcfc0a7d1643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2124912177
 GameObject:
   m_ObjectHideFlags: 0
